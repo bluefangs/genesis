@@ -1,0 +1,72 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+globs: **/*.{js,jsx,ts,tsx}
+---
+### Architectural Guidelines:
+
+**Always write TypeScipt and ensure type checking.**
+
+**Keep code modular, performant, and production-ready.** Ensure you write simple code instead of over-engineered or over-optimized difficult code.
+**Ensure no file is larger than 500 lines of code**: Make things as modular as possible. This is for easy readability 
+
+**Write verbose comments:**
+  - Document EVERY function and method with comprehensive JSDoc comments
+  - Explain complex logic with detailed inline comments
+  - Include reasoning behind implementation decisions
+  - Comment all constants and configuration values
+  - Use block comments to separate logical code sections
+  - Document edge cases and potential issues
+  - Explain security considerations in all authentication-related code
+
+**Ensure security measures are integrated into every implementation.**
+
+**ALWAYS use ShadCN's official installation method**:
+  - Use CLI command `npx shadcn@latest add [component-name]` for all components
+  - NEVER manually create ShadCN components
+  - Follow the official ShadCN documentation for component implementation
+  - ALWAYS check for component dependencies when installing new components
+    - Before using a component, ensure it and all its dependencies have been installed.
+  - Verify component compatibility and dependencies in the ShadCN UI documentation
+
+**ALWAYS use comprehensive JSDoc documentation**:
+	- ALL functions, methods, and components MUST have JSDoc-style comments
+	- Document ALL parameters, return values, and thrown exceptions
+	- Include clear descriptions of what each function does and its purpose
+	- Use proper JSDoc tags (@param, @returns, @throws, etc.)
+	- Include code examples for complex functions where applicable
+	- Document all side effects (state changes, network requests, etc.)
+	- Be extremely verbose with comments explaining complex logic
+	- Comment all constants and configuration values with their purpose
+	- Every file should have a top-level comment explaining its purpose
+	- Comment blocks should be used to separate logical sections of code
+	- Internal implementation details should be documented to aid maintainability
+
+ **ALWAYS ensure proper theme support**:
+
+  - Every component must support both light and dark themes
+  - Use Tailwind's dark mode classes (e.g., `dark:bg-gray-800`) for theme-specific styling
+  - Use CSS variables for colors that change with theme
+  - Test all components in both light and dark modes
+  - Use `useTheme()` from next-themes for theme toggling functionality
+  - Always provide sufficient color contrast in both themes for accessibility
+  - Use semantic color names in the design system, not literal colors (e.g., `text-primary` instead of `text-blue-500`)
+
+
+**ALWAYS optimize for performance and reactivity**:
+    - Use Server Components (default in app router) for static or server-rendered content
+    - Use Client Components (`"use client"`) only for interactive parts that need browser APIs or hooks
+    - Consider streaming with Suspense for progressively loading complex UIs
+
+**Refer to official documentation**:
+	- Leverage official documentation of ShadCN https://ui.shadcn.com/docs/ for implemenataion of shadcn components
+	- Leverage official documentation of nextjs in general for implementation https://nextjs.org/docs
+  - Refer to docs present in the root of the project for all aspects of architecture, design, and implementation 

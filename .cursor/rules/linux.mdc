@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: These rules need to be followed while executing any linux commands
+globs: 
+alwaysApply: true
+---
+Consider the following guidelines when you attempt run terminal commands:
+
+- Always quote sections of the command in order to ensure proper esacping of special characters.
+- BAD EXAMPLE: rmdir src/app/(core)/components/examples
+- GOOD EXAMPLE: rmdir "src/app/(core)/components/examples"
