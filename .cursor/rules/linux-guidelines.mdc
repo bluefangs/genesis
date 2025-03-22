@@ -1,0 +1,10 @@
+---
+description: Considerations for linux commands
+globs: 
+alwaysApply: true
+---
+Consider the following guidelines when you attempt run terminal commands:
+
+- Always quote file paths. This ensures special characters don't cause errors
+- BAD EXAMPLE: rmdir src/app/(core)/components/examples
+- GOOD EXAMPLE: rmdir "src/app/(core)/components/examples"
